@@ -18,7 +18,7 @@ const QuickStats = ({ data }) => {
   return (
     <section className='QuickStats'>
       <h3 className='QuickStats__heading'>
-        <span className='QuickStats__number'>{cActive}</span> active cases on <span className='QuickStats__number'>{dateString}</span>
+        <span className='QuickStats__big'>{cActive}</span> active cases on <span className='QuickStats__big'>{dateString}</span>
       </h3>
       <p className='QuickStats__paragraph'>
         Roughly {perHundThou} per 100,000 people

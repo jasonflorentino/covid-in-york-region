@@ -2,8 +2,8 @@ import { Line } from 'react-chartjs-2';
 
 import chartOptions from '../../config/chartOptions';
 
-const colorBlue = '#0081cb';
-const colorRed = '#c50e29';
+const activeColor = '#0081cb';
+const hospitalColor = '#ffca28';
 
 const ChartDailies = ({ data }) => {
 
@@ -20,8 +20,8 @@ const ChartDailies = ({ data }) => {
       label: 'Active Cases',
       data: data.map(item => item.total_active),
       fill: false,
-      borderColor: colorBlue,
-      backgroundColor: colorBlue,
+      borderColor: activeColor,
+      backgroundColor: activeColor,
       
     },
     {
@@ -29,8 +29,8 @@ const ChartDailies = ({ data }) => {
       label: 'In Hospital & ICU',
       data: data.map(item => item.hospitalized + item.hospitalized_icu),
       fill: false,
-      borderColor: colorRed,
-      backgroundColor: colorRed,
+      borderColor: hospitalColor,
+      backgroundColor: hospitalColor,
     }]
   }
 
