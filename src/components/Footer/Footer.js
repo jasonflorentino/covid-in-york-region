@@ -12,6 +12,7 @@ const Footer = () => {
       <section className='Footer__notes'>
         <h3 className="Footer__heading">✏️ Notes</h3>
         <ul className="Footer__list">
+          <li>This site has been online and actively recording cases since Monday, April 12, 2021.</li>
           <li>Data is pulled from York Region's <a className="Footer__link" href={yrCovidDashboardUrl} target='_blank' rel='noreferrer'>COVID dashboard.</a></li>
           <li>Active cases are determined by adding up cases whose statuses are "Self-Isolating", "Hospitalized" and "Hospitalized in ICU".</li>
           <li>The per 100,000 number is based off a population of 1,109,909 <a className="Footer__link" href={populartionUrl} target='_blank' rel='noreferrer'>(2016)</a></li>

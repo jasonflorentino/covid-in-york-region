@@ -32,8 +32,13 @@
   }
 
   &__list > li {
+    margin-bottom: .75rem;
     margin-left: 1rem;
     padding-left: -.25rem;
+
+    @include tablet {
+      margin-bottom: .25rem;
+    }
   }
 
   &__link {

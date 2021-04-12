@@ -17,18 +17,27 @@
     padding: 1.2rem 1.5rem 1.5rem 1.5rem;  
   }
 
+  & > p {
+    line-height: 1.4rem;
+  }
+
   &__title {
     font-size: 1.5rem;
-    font-weight: 500;
-    margin-bottom: .5rem;
-
+    font-weight: 700;
+    margin-bottom: 1rem;
+    
     @include tablet {
+      font-weight: 500;
       font-size: 2.5rem;
     }
   }
 
+  &__byline {
+    font-weight: 600;
+  }
+
   &__paragraph {
-    line-height: 1.4rem;
+    font-size: .9rem;
   }
 
   &__link {
@@ -41,6 +50,7 @@
       color: $color_secondary_dark;
       padding-bottom: .25rem;
       border-color: $color_secondary_base;
+      opacity: 1;
     }
   }
 }
