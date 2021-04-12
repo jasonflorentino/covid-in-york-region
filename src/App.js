@@ -4,6 +4,7 @@ import axios from 'axios';
 import ChartDailies from './components/ChartDailies/ChartDailies';
 import QuickStats from './components/QuickStats/QuickStats';
 import Loading from './components/Loading/Loading';
+import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import './App.scss';
 
@@ -42,6 +43,7 @@ const App = () => {
                    </>
         }
       </main>
+      <Footer />
     </div>
   );
 }

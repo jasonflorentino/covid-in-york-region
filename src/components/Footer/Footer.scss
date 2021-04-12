@@ -1,0 +1,51 @@
+@use "../../partials/variables" as *;
+@use "../../partials/mixins" as *;
+
+.Footer {
+  margin-top: 1rem;
+  padding: 1rem;  
+  
+  background-color: rgba($color_bw_black, .1);
+  border-radius: .25rem;
+  color: $color_bw_black;
+  line-height: 1.3rem;
+
+  @include tablet {
+    padding: 1.5rem;  
+    line-height: 1.5rem;
+  }
+
+  @include desktop {
+    padding: 2rem;  
+  }
+
+  &__notes {
+    margin-bottom: 2rem;
+  }
+
+  &__heading {
+    margin-bottom: .9rem;
+    padding-bottom: .3rem;
+    border-bottom: 1px solid $color_bw_black;
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+
+  &__list > li {
+    margin-left: 1rem;
+    padding-left: -.25rem;
+  }
+
+  &__link {
+    padding-bottom: .08rem;
+    border-bottom: 1px solid $color_primary_base;
+    font-weight: 600;
+    transition: all .2s;
+    
+    &:hover {
+      color: $color_secondary_dark;
+      padding-bottom: .25rem;
+      border-color: $color_secondary_base;
+    }
+  }
+}
