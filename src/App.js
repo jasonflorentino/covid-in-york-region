@@ -6,12 +6,14 @@ import QuickStats from './components/QuickStats/QuickStats';
 import Loading from './components/Loading/Loading';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
+import Error from './components/Error/Error';
 import './App.scss';
 
 const App = () => {
 
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
   
   const fetchData = () => {
     const url = process.env.REACT_APP_API_URL + '/api';
@@ -22,8 +24,7 @@ const App = () => {
       })
       .then(() => setLoading(false))
       .catch(err => {
-        alert('There was an error loading the data');
-        setLoading(false);
+        setError(true);
         console.error(err);
       })
   }
@@ -36,7 +37,8 @@ const App = () => {
     <div className='App'>
       <Header />
       <main className='App__main'>
-        {loading ? <Loading /> : 
+        {error ? <Error /> :
+         loading ? <Loading /> : 
                    <>
                      <QuickStats data={data} />
                      <ChartDailies data={data} />

@@ -1,0 +1,30 @@
+@use '../../partials/variables' as *;
+
+.Error {
+  padding: 10rem 0;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  height: 100%;
+
+  &__container {
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__heading {
+    margin-bottom: 1rem;
+
+    font-size: 2rem;
+    font-weight: 500;
+    color: $color_primary_dark;
+  }
+
+  &__text {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+}
