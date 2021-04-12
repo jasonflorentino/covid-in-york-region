@@ -1,4 +1,5 @@
 @use "../../partials/variables" as *;
+@use "../../partials/mixins" as *;
 
 .Header {
   margin-bottom: 1rem;
@@ -8,10 +9,22 @@
   color: $color_bw_black;
   background-color: rgba($color_primary_base, .5);
 
+  @include tablet {
+    padding: .8rem 1.2rem 1rem 1.2rem;  
+  }
+
+  @include desktop {
+    padding: 1.2rem 1.5rem 1.5rem 1.5rem;  
+  }
+
   &__title {
     font-size: 2.5rem;
     font-weight: 500;
     margin-bottom: .5rem;
+  }
+
+  &__paragraph {
+    line-height: 1.4rem;
   }
 
   &__link {
@@ -21,8 +34,9 @@
     transition: all .2s;
     
     &:hover {
-      color: $color_bw_white;
+      color: $color_secondary_dark;
       padding-bottom: .25rem;
+      border-color: $color_secondary_base;
     }
   }
 }

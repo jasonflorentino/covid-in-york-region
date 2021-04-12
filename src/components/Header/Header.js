@@ -6,8 +6,8 @@ const Header = () => {
 
   return (
     <header className="Header">
-      <h1 className="Header__title">COVID in York Region</h1>
-      <p>Data is published on {yorkLink} every day at 5pm and  updated here later that evening.</p>
+      <h1 className="Header__title">🏥 COVID in York Region</h1>
+      <p className="Header__paragraph">Data is published on {yorkLink} every day at 5pm and then updated here later that evening.</p>
     </header>
   )
 }
