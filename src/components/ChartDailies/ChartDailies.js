@@ -2,6 +2,11 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Line } from 'react-chartjs-2';
 
+import chartOptions from '../../config/chartOptions';
+
+const colorBlue = '#0081cb';
+const colorRed = '#c50e29';
+
 const ChartDailies = () => {
 
   const [data, setData] = useState([]);
@@ -20,7 +25,7 @@ const ChartDailies = () => {
     fetchData();
   }, [])
 
-  const dateOptions = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' }
+  const dateOptions = { weekday: 'short', month: 'short', day: 'numeric' }
 
   const chartData = {
     labels: data.map(item => new Date(item.date).toLocaleDateString('en-US', dateOptions)),
@@ -29,25 +34,18 @@ const ChartDailies = () => {
       label: 'Active Cases',
       data: data.map(item => item.total_active),
       fill: false,
-      borderColor: 'rgb(75, 192, 192)',
-      borderWidth: 3
+      borderColor: colorBlue,
+      backgroundColor: colorBlue,
+      
     },
     {
       type: 'line',
-      label: 'In Hospital',
-      data: data.map(item => item.hospitalized),
+      label: 'In Hospital & ICU',
+      data: data.map(item => item.hospitalized + item.hospitalized_icu),
       fill: false,
-      borderColor: 'rgb(255, 75, 192)',
-      borderWidth: 3
+      borderColor: colorRed,
+      backgroundColor: colorRed,
     }]
-  }
-
-  const chartOptions = {
-    scales: {
-      y: {
-        beginAtZero: true
-      }
-    }
   }
 
   return <Line 

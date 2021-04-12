@@ -1,0 +1,28 @@
+@use "../../partials/variables" as *;
+
+.Header {
+  margin-bottom: 1rem;
+  padding: .5rem .9rem 1rem .9rem;  
+  
+  border-radius: .25rem;
+  color: $color_bw_black;
+  background-color: rgba($color_primary_base, .5);
+
+  &__title {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: .5rem;
+  }
+
+  &__link {
+    padding-bottom: .08rem;
+    border-bottom: 2px solid $color_bw_white;
+    font-weight: 600;
+    transition: all .2s;
+    
+    &:hover {
+      color: $color_bw_white;
+      padding-bottom: .25rem;
+    }
+  }
+}

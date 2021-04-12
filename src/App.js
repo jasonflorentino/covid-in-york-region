@@ -5,9 +5,7 @@ import './App.scss';
 function App() {
   return (
     <div className='App'>
-      <header>
-        <Header />
-      </header>
+      <Header />
       <main>
         <ChartDailies />
       </main>
