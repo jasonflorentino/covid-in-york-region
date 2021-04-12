@@ -1,0 +1,32 @@
+@use '../../partials/variables' as *;
+
+.QuickStats {
+  margin-bottom: 1rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid $color_bw_black;
+
+  &__heading {
+    margin-bottom: .5rem;
+    font-weight: 400;
+  }
+
+  &__paragraph {
+    line-height: 1.4rem;
+  }
+
+  &__number {
+    color: $color_primary_dark;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  &__up {
+    font-weight: 700;
+    color: $color_secondary_dark;
+  }
+  
+  &__down {
+    font-weight: 700;
+    color: $color_primary_dark;
+  }
+}
