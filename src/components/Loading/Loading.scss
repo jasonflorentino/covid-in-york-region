@@ -1,0 +1,18 @@
+@use '../../partials/variables' as *;
+
+.Loading {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+
+  &__text {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 3rem;
+    font-weight: 500;
+    color: $color_primary_dark;
+  }
+}

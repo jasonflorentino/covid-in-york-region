@@ -1,7 +1,10 @@
 @use "./partials/mixins" as *;
 
 .App {
+  height: 100%;
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
 
   @include tablet {
     padding: 2rem;
@@ -9,6 +12,11 @@
 
   @include desktop {
     padding: 3rem;
+  }
+
+  &__main {
+    height: 100%;
+    flex: 1 1 auto;
   }
 }
 

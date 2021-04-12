@@ -6,7 +6,7 @@ function App() {
   return (
     <div className='App'>
       <Header />
-      <main>
+      <main className='App__main'>
         <ChartDailies />
       </main>
     </div>

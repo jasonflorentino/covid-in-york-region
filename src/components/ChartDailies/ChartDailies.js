@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Line } from 'react-chartjs-2';
 
 import chartOptions from '../../config/chartOptions';
+import Loading from '../Loading/Loading';
 
 const colorBlue = '#0081cb';
 const colorRed = '#c50e29';
@@ -10,6 +11,7 @@ const colorRed = '#c50e29';
 const ChartDailies = () => {
 
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true)
   
   const fetchData = () => {
     const url = process.env.REACT_APP_API_URL + '/api';
@@ -18,7 +20,12 @@ const ChartDailies = () => {
       .then(res => {
         setData(res.data);
       })
-      .catch(err => console.error(err))
+      .then(() => setLoading(false))
+      .catch(err => {
+        alert('There was an error loading the data');
+        setLoading(false);
+        console.error(err);
+      })
   }
 
   useEffect(() => {
@@ -48,10 +55,11 @@ const ChartDailies = () => {
     }]
   }
 
-  return <Line 
-           data={chartData} 
-           options={chartOptions}
-          />;
+  return loading ? <Loading /> : 
+                   <Line 
+                     data={chartData} 
+                     options={chartOptions}
+                    />;
 }
 
 export default ChartDailies
