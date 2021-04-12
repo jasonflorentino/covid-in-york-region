@@ -7,10 +7,14 @@ const colorRed = '#c50e29';
 
 const ChartDailies = ({ data }) => {
 
-  const dateOptions = {weekday: 'short', month: 'short', day: 'numeric', timeZone: 'America/Toronto'}
+  const dateOptions = {weekday: 'short', month: 'short', day: 'numeric'}
 
   const chartData = {
-    labels: data.map(item => new Date(item.date).toLocaleDateString('en-US', dateOptions)),
+    labels: data.map(item => {
+      let time = new Date(item.date).getTime();
+      time += 1000 * 60 * 60 * 5; // Add 5 hours to epoch timestamp
+      return new Date(time).toLocaleDateString('en-US', dateOptions);
+    }),
     datasets: [{
       type: 'line',
       label: 'Active Cases',
