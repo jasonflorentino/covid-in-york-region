@@ -7,7 +7,7 @@ const colorRed = '#c50e29';
 
 const ChartDailies = ({ data }) => {
 
-  const dateOptions = { weekday: 'short', month: 'short', day: 'numeric' }
+  const dateOptions = {weekday: 'short', month: 'short', day: 'numeric', timeZone: 'America/Toronto'}
 
   const chartData = {
     labels: data.map(item => new Date(item.date).toLocaleDateString('en-US', dateOptions)),
