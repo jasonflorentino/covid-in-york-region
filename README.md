@@ -3,7 +3,7 @@
 
 ---
 
-#### [Click here](https://covidinyr.netlify.app/) to view on Netlify
+#### [Click here](https://covidinyork.netlify.app/) to view on Netlify
 
 ---
 
