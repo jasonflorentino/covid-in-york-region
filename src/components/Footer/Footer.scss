@@ -5,7 +5,7 @@
   margin-top: 1rem;
   padding: 1rem;  
   
-  background-color: rgba($color_bw_black, .1);
+  background-color: rgba($color_bw_black, .08);
   border-radius: .25rem;
   color: $color_bw_black;
   line-height: 1.3rem;
@@ -19,7 +19,13 @@
     padding: 2rem;  
   }
 
-  &__notes {
+  & em {
+    color: $color_primary_dark;
+    font-style: normal;
+    font-weight: 700;
+  }
+
+  &__section {
     margin-bottom: 2rem;
   }
 
@@ -39,6 +45,11 @@
     @include tablet {
       margin-bottom: .25rem;
     }
+  }
+
+  &__noBullets > li {
+    list-style-type: none;
+    margin-left: 0rem;
   }
 
   &__link {
