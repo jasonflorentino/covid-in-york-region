@@ -1,3 +1,4 @@
+import utils from '../../utils/utils';
 import './QuickStats.scss';
 
 const QuickStats = ({ data }) => {
@@ -7,7 +8,7 @@ const QuickStats = ({ data }) => {
   const { total_active: pActive } = previous;
 
   const dateOptions = { weekday: 'long', month: 'long', day: 'numeric' };
-  const dateString = new Date(cDate).toLocaleDateString('en-US', dateOptions);
+  const dateString = utils.getETDateString(cDate, dateOptions);
 
   const difference = cActive - pActive;
   const direction = difference > 0 ? 'Up' : 'Down';
