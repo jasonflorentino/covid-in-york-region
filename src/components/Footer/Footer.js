@@ -9,14 +9,21 @@ const Footer = () => {
   
   return (
     <footer className='Footer'>
-      <section className='Footer__notes'>
+      <section className='Footer__section'>
+        <h3 className="Footer__heading">💫 How to Use</h3>
+        <ul className="Footer__list Footer__noBullets">
+          <li>⏳ The chart keeps track of active cases in York Region <em>over time.</em></li>
+          <li>☝️ Hover/Tap on the <em>dots</em> on the lines to show a tooltip with that point's data.</li>
+          <li>🔍 You can also click/tap on the <em>colored boxes</em> in the legend to toggle a dataset ON or OFF.</li>
+        </ul>
+      </section>
+      <section className='Footer__section'>
         <h3 className="Footer__heading">✏️ Notes</h3>
         <ul className="Footer__list">
-          <li>This site has been online and actively recording cases since Monday, April 12, 2021.</li>
-          <li>Data is pulled from York Region's <a className="Footer__link" href={yrCovidDashboardUrl} target='_blank' rel='noreferrer'>COVID dashboard.</a></li>
+          <li>This site has been online and actively recording cases since <em>Monday, April 12, 2021.</em></li>
           <li>Active cases are determined by adding up cases whose statuses are "Self-Isolating", "Hospitalized" and "Hospitalized in ICU".</li>
-          <li>The per 100,000 number is based off a population of 1,109,909 <a className="Footer__link" href={populartionUrl} target='_blank' rel='noreferrer'>(2016)</a></li>
-          <li>For more information, please view the data and notes published on <a className="Footer__link" href={yrCovidDashboardUrl} target='_blank' rel='noreferrer'>York Region's website.</a></li>
+          <li>The per-100,000 number is based off a population of 1,109,909 <a className="Footer__link" href={populartionUrl} target='_blank' rel='noreferrer'>(2016)</a></li>
+          <li>For more information, please view the data and notes published on <a className="Footer__link" href={yrCovidDashboardUrl} target='_blank' rel='noreferrer'>York Region's COVID Dashboard.</a></li>
         </ul>
       </section>
       <section className='Footer__about'>

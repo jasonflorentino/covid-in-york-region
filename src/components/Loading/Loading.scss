@@ -1,5 +1,10 @@
 @use '../../partials/variables' as *;
 
+@keyframes pulse {
+  0%   { opacity: 1; }
+  100% { opacity: 0; }
+}
+
 .Loading {
   display: flex;
   flex-flow: column;
@@ -14,5 +19,11 @@
     font-size: 2rem;
     font-weight: 500;
     color: $color_primary_dark;
+
+    animation-name: pulse;
+    animation-duration: .9s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
   }
 }
