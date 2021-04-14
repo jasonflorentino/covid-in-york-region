@@ -21,7 +21,6 @@ const Footer = () => {
         <h3 className="Footer__heading">✏️ Notes</h3>
         <ul className="Footer__list">
           <li>This site has been online and actively recording cases since <em>Monday, April 12, 2021.</em></li>
-          <li>Active cases are determined by adding up cases whose statuses are "Self-Isolating", "Hospitalized" and "Hospitalized in ICU".</li>
           <li>The per-100,000 number is based off a population of 1,109,909 <a className="Footer__link" href={populartionUrl} target='_blank' rel='noreferrer'>(2016)</a></li>
           <li>For more information, please view the data and notes published on <a className="Footer__link" href={yrCovidDashboardUrl} target='_blank' rel='noreferrer'>York Region's COVID Dashboard.</a></li>
         </ul>
