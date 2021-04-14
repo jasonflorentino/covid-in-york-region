@@ -1,4 +1,5 @@
 @use '../../partials/variables' as *;
+@use '../../partials/mixins' as *;
 
 .QuickStats {
   margin-bottom: 1rem;
@@ -8,17 +9,35 @@
   &__heading {
     margin-bottom: .3rem;
     font-weight: 400;
+    font-size: .9rem;
+
+    @include tablet {
+      font-size: 1.125rem;
+    }
   }
   
   &__paragraph {
     line-height: 1.4rem;
     margin-bottom: .3rem;
+    font-size: .9rem;
+
+    @include tablet {
+      font-size: 1rem;
+    }
   }
 
   &__big {
     color: $color_primary_dark;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 700;
+
+    @include mobile_L {
+      font-size: 1.25rem;
+    }
+
+    @include tablet {
+      font-size: 1.5rem;
+    }
   }
 
   &__up {
