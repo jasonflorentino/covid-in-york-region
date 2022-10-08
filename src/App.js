@@ -20,6 +20,7 @@ const App = () => {
   const fetchData = () => {
     setData(DailiesData)
     setLoading(false)
+    setError(false)
     return;
     // const url = process.env.REACT_APP_API_URL + '/api';
     // axios
