@@ -14,5 +14,11 @@
     height: 100%;
     flex: 1 1 auto;
   }
-}
 
+  & > h3 {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: rgba(red, 0.4);
+    border-radius: 0.25rem;
+  }
+}
